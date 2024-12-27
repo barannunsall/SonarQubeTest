@@ -42,6 +42,6 @@ jobs:
       - name: Build and analyze
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"barannunsall_SonarQubeTest_35fa62e3-bc31-4666-9b32-94df072afa66" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.login="admin" /d:sonar.password="helloPako1. " /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"barannunsall_ColorAnalysis_d44d2553-8ad8-4a89-955d-b401f1ac8275" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="admin" /d:sonar.password="helloPako1. "
           dotnet build
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.login="admin" /d:sonar.password="helloPako1. "
